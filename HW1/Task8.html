@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+
+    <script>
+        const answer = prompt("Seconds in what periond you want to count? ( hour | day | month )");
+        let seconds;
+        const minute = 60;
+
+        if (answer == "hour") {
+            seconds = 60 * minute;
+            alert(seconds);
+        } else if (answer == "day") {
+            seconds = 60 * minute * 24;
+            alert(seconds);
+        } else if (answer == "month") {
+            seconds = 60 * minute * 24 * 31;
+            alert(seconds);
+        } else {
+            alert("Try again");
+        }
+    </script>
+
+</body>
+
+</html>
