@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+
+    <script>
+        function findUnique(arr) {
+            let check = true;
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[i] == arr[j]) {
+                        check = false
+                        break;
+                    }
+                }
+            }
+            return check;
+        }
+
+        let arr = [1, 2, 3, 5, 3];
+
+        console.log(findUnique(arr));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+
+    <script>
+        function lastElem(array, amount) {
+
+            let arr = [];
+
+            if (amount == undefined) {
+                amount = 1;
+            }
+            if (amount > array.length) {
+                amount = array.length;
+            }
+            for (let index = 0; index < amount; index++) {
+                arr[index] = array[array.length - amount + index];
+            }
+            return arr;
+        }
+
+        let arr = [1, 2, 3, 5, 3];
+        console.log(lastElem(arr, 3));
+    </script>
+
+</body>
+
+</html>
