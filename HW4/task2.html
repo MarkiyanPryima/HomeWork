@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+
+    <script>
+        function checkAge() {
+            let age = prompt("Enter your age");
+            if (age == "" || isNaN(age) == true || +(age) < 14) {
+                throw new Error("Your age is not correct Please enter your age");
+            }
+            document.write("Your film:");
+        }
+
+        try {
+            checkAge();
+        } catch (error) {
+            alert(error.name + "! " + error.message);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+
+    <script>
+        function calcRectangleArea(width, height) {
+            if (typeof width != "number" || typeof height != "number") {
+                throw new Error("Type is not number");
+                return;
+            }
+            return width * height;
+        }
+
+        try {
+            console.log(calcRectangleArea(10, "5"));
+        } catch (error) {
+            console.log(error.name);
+            console.log(error.message);
+        }
+    </script>
+
+</body>
+
+</html>
