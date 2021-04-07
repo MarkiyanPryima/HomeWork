@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+
+    <script>
+        let mentor = {
+            course: "JS fundamental",
+            duration: 3,
+            direction: "web-development"
+        };
+
+        function propsCount(currentObject) {
+            let counter = 0;
+            for (const a in currentObject) {
+                counter++
+            }
+            console.log(counter);
+        }
+
+        propsCount(mentor);
+    </script>
+
+</body>
+
+</html>

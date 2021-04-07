@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+
+    <script>
+        let mentor = {
+            course: "JS fundamental",
+            duration: 3,
+            direction: "web-development",
+            company: "SoftServe",
+            city: "Lviv"
+        };
+
+        function propsCount(currentObject) {
+            let counter = 0;
+            for (const a in currentObject) {
+                counter++
+            }
+            return counter;
+        }
+
+
+        function showProps(obj) {
+            let arr = [];
+            let arr2 = [];
+            for (let i = 0; i < propsCount(obj); i++) {
+                for (const a in obj) {
+                    arr[i] = a;
+                    i++;
+                }
+            }
+
+            for (let i = 0; i < propsCount(obj); i++) {
+                for (const a in obj) {
+                    arr2[i] = obj[a];
+                    i++;
+                }
+
+                console.log(arr);
+                console.log(arr2);
+
+            }
+        }
+
+        showProps(mentor);
+    </script>
+
+</body>
+
+</html>

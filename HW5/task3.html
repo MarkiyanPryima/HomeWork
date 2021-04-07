@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+
+    <script>
+        class Person {
+
+            constructor(name, surname) {
+                this.name = name;
+                this.surname = surname;
+            }
+
+            showFullName() {
+                return (this.name + " " + this.surname);
+            }
+
+        };
+
+
+        class Student extends Person {
+            constructor(name, surname, year) {
+                super(name, surname);
+                this.year = year;
+            }
+            showFullName(middleName) {
+                return (this.name + " " + this.surname + " " + middleName);
+            }
+            showCourse() {
+                let course = 2021 - this.year;
+                if (course <= 6) {
+                    return course;
+                } else {
+                    return " Ended the university"
+                }
+            }
+        };
+
+        let  stud1  =  new  Student("Petro",  "Petrenko",  2015);
+
+        console.log(stud1.showFullName("Petrovych"));
+        console.log("Current course: "  +  stud1.showCourse());
+    </script>
+
+</body>
+
+</html>
