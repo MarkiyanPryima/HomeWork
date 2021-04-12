@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+    <input type="text" id="input1" value="Text1">
+    <input type="text" id="input2" value="Text2">
+
+    <script>
+        const input1Value = prompt("Enter input1 value");
+        const input2Value = prompt("Enter input2 value");
+
+        input1.value = input1Value;
+        input2.value = input2Value;
+        alert("The value is changed");
+        input1.value = input2Value;
+        input2.value = input1Value;
+    </script>
+</body>
+
+</html>

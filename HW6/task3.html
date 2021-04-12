@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+    <h2>Article header</h2>
+    <div id="text">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+    </div>
+    <p>Another text</p>
+
+    <script>
+        const paragraphs = document.querySelector("div").querySelectorAll("p");
+
+        for (let i = 0; i < paragraphs.length; i++) {
+            document.write("Selector text " + i + ": " + paragraphs[i].innerHTML + "<br \/>" + "<br \/>");
+        }
+    </script>
+</body>
+
+</html>

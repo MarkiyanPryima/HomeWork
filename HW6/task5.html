@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+
+<body>
+    <h1>I'am a big header!!!</h1>
+    <div id="myDiv">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <p>Fourth paragraph</p>
+    </div>
+    <ul id="myList">
+        <li>Make</li>
+        <li>me</li>
+        <li>horizontal!</li>
+    </ul>
+    <span>Make me invisible, please!</span>
+
+    <script>
+        document.querySelector("h1").style.backgroundColor = "green";
+        document.querySelector("div").querySelector("p").style.fontWeight = "bold";
+        document.querySelector("div").querySelectorAll("p")[1].style.color = "red";
+        document.querySelector("div").querySelectorAll("p")[2].style.textDecoration = "underline";
+        document.querySelector("div").querySelectorAll("p")[3].style.fontStyle = "italic";
+
+        document.querySelector("ul").querySelectorAll("li")[0].replaceWith(document.querySelector("ul")
+            .querySelectorAll("li")[0].innerHTML +
+            document.querySelector("ul").querySelectorAll("li")[1].innerHTML +
+            document.querySelector("ul").querySelectorAll("li")[2].innerHTML);
+        document.querySelector("ul").querySelector("li").remove();
+        document.querySelector("ul").querySelector("li").remove();
+
+        document.querySelector("span").style.color = "#fff";
+    </script>
+
+</body>
+
+</html>

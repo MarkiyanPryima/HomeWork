@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let main = document.createElement("main");
+        main.className = "mainClass check item";
+        document.body.appendChild(main);
+
+        let newDiv = document.createElement("div");
+        newDiv.id = "myDiv";
+        document.querySelector("main").appendChild(newDiv);
+
+        let newP = document.createElement("p");
+        newDiv.appendChild(newP);
+        let newText = document.createTextNode("First paragraph");
+        newP.appendChild(newText);
+    </script>
+
+</body>
+
+</html>
