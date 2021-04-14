@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+
+    <select>
+        <option>Peter</option>
+        <option>John</option>
+        <option>Alice</option>
+        <option>Alex</option>
+        <option>Iren</option>
+    </select>
+
+    <button>Choose and delete</button>
+
+    <script>
+        function deleteSelectedElement() {
+            let elementToDeleteIndex = document.querySelector("select").selectedIndex;
+            document.querySelector("select").querySelectorAll("option")[elementToDeleteIndex].remove()
+        }
+
+        document.querySelector("button").addEventListener("click", deleteSelectedElement);
+    </script>
+
+</body>
+
+</html>

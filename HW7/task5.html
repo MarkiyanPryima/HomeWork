@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+
+    <button id="liveButton">Live button</button>
+    <hr>
+
+    <script>
+        document.getElementById("liveButton").addEventListener("click", function () {
+            let click = document.createElement("p");
+            click.innerHTML = "I was pressed";
+            document.body.appendChild(click);
+        })
+
+        document.getElementById("liveButton").addEventListener("mouseover", function () {
+            let mouseOver = document.createElement("p");
+            mouseOver.innerHTML = "Mouse on me";
+            document.body.appendChild(mouseOver);
+        })
+
+        document.getElementById("liveButton").addEventListener("mouseout", function () {
+            let mouseOut = document.createElement("p");
+            mouseOut.innerHTML = "Mouse is not on me";
+            document.body.appendChild(mouseOut);
+        })
+    </script>
+</body>
+
+</html>

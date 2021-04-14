@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+    <button id="firstButton">Click to make the page blue</button>
+    <button id="secondButton">Double-click to make the page pink</button>
+    <button id="thirdButton">Click and hold to make the page brown</button>
+    <a href="">Hover over to make the page yellow</a>
+
+
+    <script>
+        function triggerButton1() {
+            document.body.style.backgroundColor = "Blue";
+        }
+
+        function triggerButton2() {
+            document.body.style.backgroundColor = "Pink";
+        }
+
+        function pressButton3() {
+            document.body.style.backgroundColor = "Brown";
+        }
+
+        function unPressButton3() {
+            document.body.style.backgroundColor = "#fff";
+        }
+
+        function aMouseOver() {
+            document.body.style.backgroundColor = "yellow";
+        }
+
+        function aMouseOut() {
+            document.body.style.backgroundColor = "#fff";
+        }
+
+        document.getElementById("firstButton").addEventListener("click", triggerButton1);
+
+        document.getElementById("secondButton").addEventListener("dblclick", triggerButton2);
+
+
+        document.getElementById("thirdButton").addEventListener("mousedown", pressButton3);
+        document.getElementById("thirdButton").addEventListener("mouseup", unPressButton3);
+
+        document.querySelector("a").addEventListener("mouseover",aMouseOver);
+        document.querySelector("a").addEventListener("mouseout",aMouseOut);
+    </script>
+
+</body>
+
+</html>

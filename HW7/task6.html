@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+<span id="width"></span>
+<span id="height"></span>
+
+<body>
+    <script>
+        function showWindowSize() {
+            document.getElementById("width").innerHTML = "Width: " + window.innerWidth;
+            document.getElementById("height").innerHTML = "Height: " + window.innerHeight;
+        }
+
+        showWindowSize();
+        window.addEventListener("resize", showWindowSize);
+    </script>
+</body>
+
+</html>
