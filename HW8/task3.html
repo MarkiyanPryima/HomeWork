@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "cdbBdbsbz";
+        let regExp = /db+d/gi;
+        let regExp2 = /db+/gi;
+
+        function findPattern(str) {
+
+            let result = regExp.exec(str);
+            let secondVar = regExp2.exec(str);
+
+            result[1] = secondVar[0].slice(1);
+
+            result[2] = result[0][result[0].length - 1];
+
+            console.log(result);
+        }
+
+        findPattern(str);
+    </script>
+</body>
+
+</html>

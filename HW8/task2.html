@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+    <script>
+        str1 = "Qmail2@gmail.com";
+        str2 = "Qmail2@gmail.com";
+        regExp1 = /@/;
+        regExp2 = /gmail/;
+        regExp3 = /\.com/;
+
+        function checkEmail(str) {
+            alert(regExp1.test(str) && regExp2.test(str) && regExp3.test(str));
+        }
+
+        checkEmail(str1);
+        checkEmail(str2);
+    </script>
+</body>
+
+</html>

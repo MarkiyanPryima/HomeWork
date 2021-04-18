@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+
+    <script>
+        let regExp1 = /[^\w@\.-]/g;
+        let regExp2 = /^-|^_/;
+        let regExp3 = /-/g;
+
+        function checkEmail(email) {
+            let size;
+            let arr = email.match(regExp3);
+            if (arr == null) {
+                size = 0;
+            } else size = arr.length;
+
+            if (size > 1) {
+                alert("Email is not correct!");
+                return;
+            }
+
+            if (regExp1.test(email) || regExp2.test(email)) {
+                alert("Email is not correct!");
+            } else {
+                alert("Email is correct!");
+            }
+        }
+
+        checkEmail("my_mail@gmail.com");
+        checkEmail('#my_mail@gmail.com');
+    </script>
+
+</body>
+
+</html>
