@@ -9,12 +9,10 @@
     <script>
         str1 = "Qmail2@gmail.com";
         str2 = "Qmail2@gmailcom";
-        regExp1 = /@/;
-        regExp2 = /gmail/;
-        regExp3 = /\.com/;
-
+        regExp1 = /@gmail\.com/;
+        
         function checkEmail(str) {
-            alert(regExp1.test(str) && regExp2.test(str) && regExp3.test(str));
+            alert(regExp1.test(str));
         }
 
         checkEmail(str1);
