@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Untitled Document</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <input type="checkbox">
+  <input type="checkbox">
+  <input type="checkbox">
+  <input type="checkbox">
+  <input type="checkbox">
+  <input type="checkbox">
+  <script>
+    let checkedCount = 0;
+
+    $("input").on("change", function () {
+
+      if ($("input").eq(0).prop("checked") == true || $("input").eq(1).prop("checked") == true || $("input").eq(2)
+        .prop("checked") == true || $("input").eq(3).prop("checked") == true || $("input").eq(4).prop("checked") ==
+        true || $("input").eq(5).prop("checked") == true) {
+        checkedCount++;
+
+      } else {
+        checkedCount--;
+      }
+
+      if (checkedCount >= 3) {
+        $("input").attr("disabled", "disabled");
+      }
+    })
+  </script>
+</body>
+
+</html>
