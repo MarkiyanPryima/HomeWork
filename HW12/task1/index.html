@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="button1" onclick="vote()">Vote!</button>
+    <script>
+        function vote() {
+            const ajaxRequest = new XMLHttpRequest;
+            ajaxRequest.open('GET', 'data.txt', true);
+
+            ajaxRequest.onreadystatechange = function () {
+                if (ajaxRequest.readyState != 4) return;
+
+                if (ajaxRequest.status != 200) {
+                    alert(ajaxRequest.status + ': ' + ajaxRequest.statusText);
+                } else {
+                    const date = new Date;
+                    document.getElementById("button1").innerHTML = ajaxRequest.responseText + " " + date;
+                }
+            }
+            ajaxRequest.send();
+        }
+    </script>
+</body>
+
+</html>

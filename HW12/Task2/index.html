@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="button1" onclick="downloadBooks()">Download books</button>
+
+  <script>
+    function downloadBooks() {
+
+      const ajaxRequest = new XMLHttpRequest();
+      ajaxRequest.open('GET', 'books.json', true);
+
+      ajaxRequest.onreadystatechange = function () {
+        if (ajaxRequest.readyState != 4) return;
+
+        if (ajaxRequest.status != 200) {
+          alert(ajaxRequest.status + ': ' + ajaxRequest.statusText);
+        } else {
+          document.getElementById("button1").remove();
+
+          let list = document.createElement("ul");
+
+          document.getElementsByTagName("body")[0].appendChild(list);
+
+          let arr = JSON.parse(ajaxRequest.responseText);
+
+          for (let i = 0; i < arr.length; i++) {
+            let li = document.createElement("li");
+            li.innerHTML = arr[i].author;
+            list.appendChild(li);
+          }
+
+        }
+      }
+      ajaxRequest.send();
+    }
+  </script>
+
+</body>
+
+</html>
